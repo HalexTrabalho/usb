@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guia Técnico: Especificações de Portas USB</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        /* Custom Styles for nuances not covered by Tailwind utilities */
+        .usb-gradient {
+            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+        }
+        .correct-answer {
+            background-color: #dcfce7 !important; /* green-100 */
+            border-color: #22c55e !important; /* green-500 */
+            color: #14532d !important;
+        }
+        .wrong-answer {
+            background-color: #fee2e2 !important; /* red-100 */
+            border-color: #ef4444 !important; /* red-500 */
+            color: #7f1d1d !important;
+        }
+        .disabled-btn {
+            opacity: 0.5;
+            cursor: not-allowed;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans leading-relaxed">
+
+    <!-- Header / Navigation -->
+    <header class="usb-gradient text-white shadow-lg fixed w-full z-50">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <i class="fa-brands fa-usb text-3xl text-blue-400"></i>
+                <div>
+                    <h1 class="text-xl font-bold tracking-wide">TechSpecs<span class="text-blue-400">.DB</span></h1>
+                    <p class="text-xs text-slate-400">Hardware & Conectividade</p>
+                </div>
+            </div>
+            <nav class="hidden md:block">
+                <ul class="flex gap-6 text-sm font-medium">
+                    <li><a href="#intro" class="hover:text-blue-400 transition">Introdução</a></li>
+                    <li><a href="#colors" class="hover:text-blue-400 transition">Cores & Padrões</a></li>
+                    <li><a href="#quiz" class="bg-blue-600 px-4 py-2 rounded hover:bg-blue-500 transition">Quiz Técnico</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="intro" class="pt-32 pb-16 px-4 bg-white">
+        <div class="container mx-auto max-w-4xl text-center">
+            <span class="inline-block py-1 px-3 rounded-full bg-blue-100 text-blue-800 text-xs font-bold mb-4">HARDWARE REVIEW</span>
+            <h2 class="text-4xl md:text-5xl font-extrabold text-slate-900 mb-6">
+                Decodificando as Cores das <span class="text-blue-600">Portas USB</span>
+            </h2>
+            <p class="text-lg text-slate-600 mb-8">
+                Você sabia que as cores das portas USB (Branco, Preto, Azul, Vermelho, Amarelo) não são apenas estéticas? Elas indicam a geração, velocidade de transferência e capacidade de energia. Este guia técnico detalha as especificações exatas de cada padrão.
+            </p>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center mt-12 border-t pt-8">
+                <div class="p-4">
+                    <p class="text-3xl font-bold text-slate-900">1996</p>
+                    <p class="text-sm text-slate-500">Lançamento do USB 1.0</p>
+                </div>
+                <div class="p-4">
+                    <p class="text-3xl font-bold text-slate-900">20Gbps</p>
+                    <p class="text-sm text-slate-500">Velocidade Máx. (Gen 2x2)</p>
+                </div>
+                <div class="p-4">
+                    <p class="text-3xl font-bold text-slate-900">Full</p>
+                    <p class="text-sm text-slate-500">Duplex (USB 3.0+)</p>
+                </div>
+                <div class="p-4">
+                    <p class="text-3xl font-bold text-slate-900">Charge</p>
+                    <p class="text-sm text-slate-500">Always On Support</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Content Sections -->
+    <main class="container mx-auto max-w-4xl px-4 py-12 space-y-16">
+        
+        <!-- USB 1.0 & 2.0 -->
+        <article id="colors" class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden flex flex-col md:flex-row">
+            <div class="md:w-1/3 bg-slate-100 flex items-center justify-center p-8 border-r border-slate-200">
+                <div class="text-center">
+                    <i class="fa-solid fa-plug text-6xl text-slate-800 mb-4"></i>
+                    <h3 class="font-bold text-slate-700">O Legado</h3>
+                </div>
+            </div>
+            <div class="p-8 md:w-2/3">
+                <h3 class="text-2xl font-bold mb-4 flex items-center gap-2">
+                    <span class="w-4 h-4 rounded-full bg-white border border-slate-400 shadow-sm"></span>
+                    <span class="w-4 h-4 rounded-full bg-black"></span>
+                    Branco (1.0) e Preto (2.0)
+                </h3>
+                <ul class="space-y-3 text-slate-600">
+                    <li class="flex items-start gap-3">
+                        <i class="fa-solid fa-check mt-1 text-green-500"></i>
+                        <span><strong>Branco (USB 1.0 - 1996):</strong> A primeira geração. Velocidade extremamente baixa (1.5 a 12 Mbps). Operação "Half Duplex" (uma direção por vez). Obsoleto.</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <i class="fa-solid fa-check mt-1 text-green-500"></i>
+                        <span><strong>Preto (USB 2.0 - 2000):</strong> O padrão por mais de uma década. Velocidade de até <strong>480 Mbps</strong>. Ainda muito usado para teclados, mouses e impressoras devido à sua vasta compatibilidade.</span>
+                    </li>
+                </ul>
+            </div>
+        </article>
+
+        <!-- USB 3.0 & 3.1 -->
+        <article class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden flex flex-col md:flex-row">
+            <div class="md:w-1/3 bg-blue-50 flex items-center justify-center p-8 border-r border-slate-200">
+                <div class="text-center">
+                    <i class="fa-brands fa-usb text-6xl text-blue-600 mb-4"></i>
+                    <h3 class="font-bold text-blue-800">Alta Velocidade</h3>
+                </div>
+            </div>
+            <div class="p-8 md:w-2/3">
+                <h3 class="text-2xl font-bold mb-4 flex items-center gap-2">
+                    <span class="w-4 h-4 rounded-full bg-blue-600"></span>
+                    <span class="w-4 h-4 rounded-full bg-teal-400"></span>
+                    Azul (3.0) e Verde Água (3.1)
+                </h3>
+                <p class="text-slate-600 mb-4">A revolução da velocidade com suporte a comunicação <strong>Full Duplex</strong> (envia e recebe dados simultaneamente) e mais pinos internos.</p>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div class="bg-slate-50 p-4 rounded-lg border border-slate-100">
+                        <h4 class="font-bold text-blue-700">Azul (SuperSpeed)</h4>
+                        <p class="text-sm text-slate-500">USB 3.0 (2008)</p>
+                        <p class="text-lg font-bold">5 Gbps</p>
+                    </div>
+                    <div class="bg-slate-50 p-4 rounded-lg border border-slate-100">
+                        <h4 class="font-bold text-teal-600">Verde Água</h4>
+                        <p class="text-sm text-slate-500">USB 3.1 Gen 1 (2013)</p>
+                        <p class="text-lg font-bold">10 Gbps</p>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <!-- Power Delivery & Latest Gens -->
+        <article class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden flex flex-col md:flex-row">
+            <div class="md:w-1/3 bg-red-50 flex items-center justify-center p-8 border-r border-slate-200">
+                <div class="text-center">
+                    <i class="fa-solid fa-bolt text-6xl text-red-500 mb-4"></i>
+                    <h3 class="font-bold text-red-800">Energia & Potência</h3>
+                </div>
+            </div>
+            <div class="p-8 md:w-2/3">
+                <h3 class="text-2xl font-bold mb-4 flex items-center gap-2">
+                    <span class="w-4 h-4 rounded-full bg-red-600"></span>
+                    <span class="w-4 h-4 rounded-full bg-yellow-400"></span>
+                    <span class="w-4 h-4 rounded-full bg-orange-500"></span>
+                    Vermelho, Amarelo e Laranja
+                </h3>
+                <ul class="space-y-4 text-slate-600">
+                    <li class="border-l-4 border-red-500 pl-4">
+                        <strong>Vermelho (USB 3.2 / 3.1 Gen 2):</strong> Alta performance (10 a 20 Gbps). Frequentemente associado a maior amperagem para carregamento rápido.
+                    </li>
+                    <li class="border-l-4 border-yellow-400 pl-4">
+                        <strong>Amarelo e Laranja (Always On):</strong> O recurso "Charge and Sleep". Essas portas mantêm a energia ativa mesmo com o computador desligado (desde que conectado à tomada ou com bateria), permitindo carregar celulares ou powerbanks. Portas laranjas são mais comuns em equipamentos industriais.
+                    </li>
+                </ul>
+                <div class="mt-4 bg-gray-100 p-3 rounded text-xs text-gray-500">
+                    <i class="fa-solid fa-triangle-exclamation mr-1"></i>
+                    Nota: As cores são convenções da indústria, não regras absolutas. Fabricantes podem alterar as cores por motivos de design (ex: Razer usa verde, alguns gabinetes usam tudo preto).
+                </div>
+            </div>
+        </article>
+
+    </main>
+
+    <!-- Quiz Section -->
+    <section id="quiz" class="bg-slate-900 text-white py-16">
+        <div class="container mx-auto max-w-3xl px-4">
+            <div class="text-center mb-10">
+                <h2 class="text-3xl font-bold mb-2">Avaliação de Conhecimento Técnico</h2>
+                <p class="text-slate-400">Teste sua retenção sobre as especificações USB.</p>
+                <div class="mt-4 inline-block bg-slate-800 px-4 py-2 rounded-full text-sm border border-slate-700">
+                    <i class="fa-solid fa-database mr-2 text-blue-400"></i>
+                    Questões carregadas aleatoriamente do servidor
+                </div>
+            </div>
+
+            <!-- Quiz Container -->
+            <form id="quizForm" class="space-y-6">
+                <div id="questionsContainer" class="space-y-6">
+                    <!-- Questions will be injected here via SQL-Simulated JS -->
+                </div>
+
+                <div class="flex flex-col items-center gap-4 mt-8">
+                    <button type="button" id="calculateBtn" class="bg-blue-600 hover:bg-blue-500 text-white font-bold py-3 px-8 rounded-lg shadow-lg transition transform hover:scale-105 w-full md:w-auto">
+                        <i class="fa-solid fa-calculator mr-2"></i> Calcular Nota Final
+                    </button>
+                    
+                    <div id="resultContainer" class="hidden w-full bg-slate-800 p-6 rounded-lg border border-slate-700 text-center animate-fade-in">
+                        <p class="text-sm text-slate-400 uppercase tracking-widest mb-1">Resultado da Avaliação</p>
+                        <div id="scoreDisplay" class="text-4xl font-black text-white mb-2">0/10</div>
+                        <p id="feedbackMessage" class="text-blue-300"></p>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <footer class="bg-slate-950 text-slate-500 py-8 text-center text-sm border-t border-slate-900">
+        <p>&copy; Halex System&reg</p>
+    </footer>
+
+    <!-- JavaScript Application Logic -->
+    <script>
+        /**
+         * SISTEMA DE BANCO DE DADOS SIMULADO (SQL)
+         * Estrutura de dados robusta para suportar a lógica do quiz.
+         * Pool de 25 questões para garantir a regra de "40% de renovação" (4 de 10) ao atualizar.
+         */
+        const sqlDatabase = [
+            { id: 1, question: "Qual é a velocidade máxima teórica do USB 2.0 (porta preta)?", options: ["12 Mbps", "480 Mbps", "5 Gbps", "10 Gbps"], correct: 1 },
+            { id: 2, question: "Em que ano foi introduzido o padrão USB 1.0?", options: ["1996", "2000", "2005", "1990"], correct: 0 },
+            { id: 3, question: "Qual cor geralmente identifica uma porta USB 3.0?", options: ["Preto", "Branco", "Azul", "Vermelho"], correct: 2 },
+            { id: 4, question: "O que significa o recurso 'Always On' em portas amarelas?", options: ["Transfere dados mais rápido", "Carrega dispositivos com o PC desligado", "Nunca pode ser desconectada", "Funciona apenas com mouse"], correct: 1 },
+            { id: 5, question: "Qual a velocidade associada ao USB 3.1 Gen 1 (Verde Água/Azul)?", options: ["480 Mbps", "5 Gbps", "10 Gbps", "20 Gbps"], correct: 2 },
+            { id: 6, question: "Portas USB 1.0 operam em qual modo de comunicação?", options: ["Full Duplex", "Half Duplex", "Simplex", "Wireless"], correct: 1 },
+            { id: 7, question: "Qual a principal vantagem da porta USB 3.0 sobre a 2.0 além da velocidade?", options: ["Comunicação Full Duplex", "Cabo menor", "Conector triangular", "Não precisa de energia"], correct: 0 },
+            { id: 8, question: "Portas vermelhas são frequentemente associadas a quais padrões?", options: ["USB 1.0", "USB 2.0", "USB 3.1 Gen 2 / 3.2", "VGA"], correct: 2 },
+            { id: 9, question: "A cor das portas USB é uma regra obrigatória para todos os fabricantes?", options: ["Sim, é lei internacional", "Não, é uma convenção, mas pode variar", "Sim, exceto para Apple", "Não, as cores são aleatórias"], correct: 1 },
+            { id: 10, question: "Portas Laranjas são mais comuns em qual ambiente?", options: ["Notebooks Gamers", "Equipamentos Industriais", "Celulares", "Impressoras domésticas"], correct: 1 },
+            { id: 11, question: "Quantos pinos extras o USB 3.0 tem em relação ao 2.0 para permitir Full Duplex?", options: ["Nenhum", "2 pinos", "5 pinos (total 9)", "10 pinos"], correct: 2 },
+            { id: 12, question: "Qual destas portas é considerada obsoleta para transferência de grandes arquivos?", options: ["USB 3.0", "USB 3.2", "USB 2.0", "Thunderbolt"], correct: 2 },
+            { id: 13, question: "A velocidade do USB 1.0 varia entre:", options: ["1.5 a 12 Mbps", "10 a 100 Mbps", "1 a 2 Gbps", "500 kbps"], correct: 0 },
+            { id: 14, question: "O que acontece se você conectar um dispositivo USB 3.0 em uma porta 2.0?", options: ["Não funciona", "Funciona na velocidade do 2.0", "O dispositivo queima", "Funciona na velocidade do 3.0"], correct: 1 },
+            { id: 15, question: "Qual o nome comercial do USB 3.0?", options: ["Hi-Speed", "SuperSpeed", "MegaSpeed", "UltraSpeed"], correct: 1 },
+            { id: 16, question: "Portas Vermelhas podem atingir velocidades de até:", options: ["480 Mbps", "5 Gbps", "20 Gbps", "100 Gbps"], correct: 2 },
+            { id: 17, question: "Para que servem os contatos metálicos extras no fundo de uma porta azul?", options: ["Apenas para aterramento", "Para transferência de dados em alta velocidade", "Para travar o cabo", "Estética"], correct: 1 },
+            { id: 18, question: "Qual padrão USB dominou o mercado entre 2000 e 2010?", options: ["USB 1.1", "USB 2.0", "USB 3.0", "USB-C"], correct: 1 },
+            { id: 19, question: "O USB Tipo C torna as cores menos relevantes porque:", options: ["Ele não usa cores", "Ele suporta múltiplos protocolos (Thunderbolt, DP, USB4)", "Ele é invisível", "Ele é pintado apenas de dourado"], correct: 1 },
+            { id: 20, question: "Portas Amarelas geralmente seguem as especificações de velocidade do:", options: ["USB 1.0", "USB 2.0 ou 3.0", "USB 5.0", "Firewire"], correct: 1 },
+            { id: 21, question: "O que significa 'Full Duplex' no USB 3.0?", options: ["Envia e recebe dados ao mesmo tempo", "Só envia dados", "Só recebe dados", "Usa dois cabos"], correct: 0 },
+            { id: 22, question: "Qual a velocidade máxima do USB 3.0 (Azul)?", options: ["480 Mbps", "1 Gbps", "5 Gbps", "10 Gbps"], correct: 2 },
+            { id: 23, question: "Portas brancas são ideais hoje para:", options: ["HDs Externos", "SSDs NVMe", "Nada, são muito lentas", "Monitores 4K"], correct: 2 },
+            { id: 24, question: "Qual a principal função do USB 3.1 Gen 2?", options: ["Carregar carros elétricos", "Transferência de dados a 10Gbps+", "Conectar mouses antigos", "Áudio analógico"], correct: 1 },
+            { id: 25, question: "Se um notebook está desligado e você pluga o celular na porta azul (padrão), ele carrega?", options: ["Sempre sim", "Geralmente não, a menos que seja configurada (amarela/vermelha)", "Sim, se for lua cheia", "Depende do cabo"], correct: 1 }
+        ];
+
+        /**
+         * CLASSE DE GERENCIAMENTO DO QUIZ
+         * Encapsula a lógica de negócio
+         */
+        class QuizManager {
+            constructor(database) {
+                this.fullDatabase = database;
+                this.selectedQuestions = [];
+                this.userAnswers = {};
+                this.quizForm = document.getElementById('quizForm');
+                this.container = document.getElementById('questionsContainer');
+                this.calculateBtn = document.getElementById('calculateBtn');
+                this.resultContainer = document.getElementById('resultContainer');
+                this.scoreDisplay = document.getElementById('scoreDisplay');
+                this.feedbackMessage = document.getElementById('feedbackMessage');
+            }
+
+            init() {
+                this.selectRandomQuestions();
+                this.renderQuestions();
+                this.attachEvents();
+            }
+
+            // Algoritmo Fisher-Yates Shuffle para aleatoriedade robusta
+            shuffleArray(array) {
+                for (let i = array.length - 1; i > 0; i--) {
+                    const j = Math.floor(Math.random() * (i + 1));
+                    [array[i], array[j]] = [array[j], array[i]];
+                }
+                return array;
+            }
+
+            // Seleciona 10 questões aleatórias do pool
+            selectRandomQuestions() {
+                // Clona o array para não modificar o original
+                const shuffled = this.shuffleArray([...this.fullDatabase]);
+                this.selectedQuestions = shuffled.slice(0, 10);
+            }
+
+            renderQuestions() {
+                this.container.innerHTML = '';
+                this.selectedQuestions.forEach((q, index) => {
+                    const questionHTML = `
+                        <div class="bg-slate-800 p-6 rounded-lg border border-slate-700 question-block" data-id="${q.id}">
+                            <p class="font-semibold text-lg mb-4 text-slate-200"><span class="text-blue-500">#${index + 1}.</span> ${q.question}</p>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                                ${q.options.map((opt, optIndex) => `
+                                    <label class="flex items-center space-x-3 p-3 rounded bg-slate-700 hover:bg-slate-600 cursor-pointer transition border border-transparent option-label" id="q${q.id}-opt${optIndex}">
+                                        <input type="radio" name="q${q.id}" value="${optIndex}" class="form-radio text-blue-600 focus:ring-blue-500 h-4 w-4">
+                                        <span class="text-sm md:text-base">${opt}</span>
+                                    </label>
+                                `).join('')}
+                            </div>
+                        </div>
+                    `;
+                    this.container.innerHTML += questionHTML;
+                });
+            }
+
+            attachEvents() {
+                this.calculateBtn.addEventListener('click', () => this.calculateScore());
+            }
+
+            calculateScore() {
+                // 1. Desativar botão para evitar duplo envio (Regra 2d)
+                this.calculateBtn.classList.add('disabled-btn', 'bg-slate-600');
+                this.calculateBtn.innerHTML = '<i class="fa-solid fa-check"></i> Calculado';
+                
+                let score = 0;
+                let total = this.selectedQuestions.length;
+
+                this.selectedQuestions.forEach(q => {
+                    // Seleciona o input marcado para esta questão
+                    const selectedOption = document.querySelector(`input[name="q${q.id}"]:checked`);
+                    const questionBlock = document.querySelector(`.question-block[data-id="${q.id}"]`);
+                    
+                    if (selectedOption) {
+                        const answerIndex = parseInt(selectedOption.value);
+                        const label = document.getElementById(`q${q.id}-opt${answerIndex}`);
+                        
+                        if (answerIndex === q.correct) {
+                            score++;
+                            // Estilo Visual Correto
+                            label.classList.add('correct-answer');
+                            // Adicionar ícone de check
+                            const icon = document.createElement('i');
+                            icon.className = 'fa-solid fa-check ml-auto text-green-700';
+                            label.appendChild(icon);
+                        } else {
+                            // Estilo Visual Errado
+                            label.classList.add('wrong-answer');
+                            const icon = document.createElement('i');
+                            icon.className = 'fa-solid fa-xmark ml-auto text-red-700';
+                            label.appendChild(icon);
+                            
+                            // Mostrar qual era a correta
+                            const correctLabel = document.getElementById(`q${q.id}-opt${q.correct}`);
+                            correctLabel.classList.add('correct-answer', 'opacity-75');
+                            correctLabel.innerHTML += ' <span class="text-xs font-bold text-green-800 ml-2">(Correto)</span>';
+                        }
+                    } else {
+                        // Não respondeu - destacar a correta
+                         const correctLabel = document.getElementById(`q${q.id}-opt${q.correct}`);
+                         correctLabel.classList.add('bg-blue-900', 'border-blue-500'); // Destaque neutro
+                         correctLabel.innerHTML += ' <span class="text-xs font-bold text-blue-300 ml-2">(Era esta)</span>';
+                    }
+                    
+                    // Desabilitar todos os inputs desta questão
+                    const inputs = questionBlock.querySelectorAll('input');
+                    inputs.forEach(input => input.disabled = true);
+                });
+
+                // Exibir Resultados
+                this.resultContainer.classList.remove('hidden');
+                this.scoreDisplay.textContent = `${score}/${total}`;
+                
+                // Feedback message
+                const percentage = (score / total) * 100;
+                if (percentage === 100) {
+                    this.feedbackMessage.textContent = "Excelente! Você é um mestre do hardware.";
+                    this.feedbackMessage.className = "text-green-400 font-bold";
+                } else if (percentage >= 70) {
+                    this.feedbackMessage.textContent = "Muito bom! Conhecimento sólido.";
+                    this.feedbackMessage.className = "text-blue-400 font-bold";
+                } else {
+                    this.feedbackMessage.textContent = "Continue estudando as especificações.";
+                    this.feedbackMessage.className = "text-yellow-400 font-bold";
+                }
+
+                // Scroll suave até o resultado
+                this.resultContainer.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
+        }
+
+        // Inicialização do Sistema
+        window.addEventListener('DOMContentLoaded', () => {
+            const quiz = new QuizManager(sqlDatabase);
+            quiz.init();
+        });
+
+    </script>
+</body>
+</html>
